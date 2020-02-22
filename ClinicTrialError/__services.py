@@ -1,33 +1,36 @@
 class Services:
     
-    def __init__(self, rooms, durations, maternityServices):
-        self.rooms = rooms
-        self.durations = durations
-        self.maternityServices = maternityServices
+    def __init__(self, drug, room, duration, maternity_services):
+        self.drug = drug
+        self.room = room
+        self.duration = duration
+        self.maternity_services = maternity_services
     
-    def getRooms(self):
-        if self.rooms == "Class 1":
-            return self.durations * 450000
-        elif self.rooms == "Class 2":
-            return self.durations * 250000
-        elif self.rooms == "Class 3":
-            return self.durations * 150000
-        elif self.rooms == "VIP":
-            return self.durations * 600000
-        elif self.rooms == "VVIP":
-            return self.durations * 800000
+    def get_room(self):
+        if self.room == "Class 1":
+            return self.duration * 450000
+        elif self.room == "Class 2":
+            return self.duration * 250000
+        elif self.room == "Class 3":
+            return self.duration * 150000
+        elif self.room == "VIP":
+            return self.duration * 600000
+        elif self.room == "VVIP":
+            return self.duration * 800000
         else:
             return 0
     
-    def getMaternityServives:
-        if self.maternityServices == "normal":
+    def get_maternity_servives(self):
+        if self.maternity_services == "normal":
             return 4000000
         else:
             return 8000000
     
-    def medicalAction:
-        if self.maternityServices == "normal":
+    def medical_action(self):
+        if self.maternity_services == "normal":
             return 3000000 + 1500000
         else:
             return 8000000
     
+    def get_drug(self):
+        return self.drug
