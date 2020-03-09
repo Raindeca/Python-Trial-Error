@@ -4,7 +4,7 @@ from tabulate import tabulate
 
 class Invoice:
 
-    total = Services.get_drug + Services.medical_action + Services.maternity_services
+    total = sum(Services.service_payment)
 
     def invoice():
         print("Biodata Pasien:")
