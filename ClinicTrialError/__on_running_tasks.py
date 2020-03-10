@@ -1,7 +1,7 @@
 from __patients import Patients
 from __services import Services
 
-class tasks:
+class Tasks:
 
     def fetch_patient():
         full_name = input("Full Name\t: ")
