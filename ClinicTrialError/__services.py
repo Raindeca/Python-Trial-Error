@@ -9,40 +9,43 @@ class Services:
     
     def get_room(self):
         if self.room == "Class 1":
-            service_payment.append(self.duration * 450000)
+            self.service_payment.append(self.duration * 450000)
             return self.duration * 450000
         elif self.room == "Class 2":
-            service_payment.append(self.duration * 250000)
+            self.service_payment.append(self.duration * 250000)
             return self.duration * 250000
         elif self.room == "Class 3":
-            service_payment.append(self.duration * 150000)
+            self.service_payment.append(self.duration * 150000)
             return self.duration * 150000
         elif self.room == "VIP":
-            service_payment.append(self.duration * 600000)
+            self.service_payment.append(self.duration * 600000)
             return self.duration * 600000
         elif self.room == "VVIP":
-            service_payment.append(self.duration * 800000)
+            self.service_payment.append(self.duration * 800000)
             return self.duration * 800000
         else:
-            service_payment.append(0)
+            self.service_payment.append(0)
             return 0
     
-    def get_maternity_servives(self):
+    def get_maternity_services(self):
         if self.maternity_services == "normal":
-            service_payment.append(4000000)
+            self.service_payment.append(4000000)
             return 4000000
         else:
-            service_payment.append(8000000)
+            self.service_payment.append(8000000)
             return 8000000
     
     def medical_action(self):
         if self.maternity_services == "normal":
-            service_payment.append(3000000 + 1500000)
+            self.service_payment.append(3000000 + 1500000)
             return 3000000 + 1500000
         else:
-            service_payment.append(8000000)
+            self.service_payment.append(8000000)
             return 8000000
     
     def get_drug(self):
-        service_payment.append(self.drug)
+        self.service_payment.append(self.drug)
         return self.drug
+
+    def get_service_payment(self):
+        return sum(self.service_payment)
