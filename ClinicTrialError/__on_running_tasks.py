@@ -12,8 +12,8 @@ class Tasks:
         return Patients(full_name,guardian_name,address,phone,blood_type)
 
     def fetch_service():
-        drug = input("Drug price\t: Rp ")
+        drug = int(input("Drug price\t: Rp "))
         room = input("Room\t: ")
-        duration = input("Duration of stay\t: ")
+        duration = int(input("Duration of stay\t: "))
         maternity_services = input("Maternity Service\t: ")
         return Services(drug, room, duration, maternity_services)
